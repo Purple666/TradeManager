@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="window" onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="726.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trademanager.Controllers.DetailedStatistics">
+   <children>
+      <AnchorPane prefHeight="701.0" prefWidth="197.0">
+         <children>
+            <Pane fx:id="MenuPane" prefHeight="726.0" prefWidth="221.0" style="-fx-background-color: #0c1a33;">
+               <children>
+                  <Label alignment="CENTER" layoutX="28.0" layoutY="29.0" prefHeight="33.0" prefWidth="160.0" text="Trade Manager" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="AR CENA" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="Home" layoutX="71.0" layoutY="246.0" onAction="#ChangeScene" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="AR CENA" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="ImportData" layoutX="44.0" layoutY="355.0" onAction="#ChangeScene" text="Import Data" textFill="WHITE">
+                     <font>
+                        <Font name="AR CENA" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="Alarms" layoutX="63.0" layoutY="411.0" onAction="#ChangeScene" text="Alarms" textFill="WHITE">
+                     <font>
+                        <Font name="AR CENA" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="DetailedStatistics" layoutX="18.0" layoutY="300.0" onAction="#ChangeScene" text="Detailed Statistics" textFill="WHITE">
+                     <font>
+                        <Font name="AR CENA" size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="221.0" prefHeight="148.0" prefWidth="787.0" style="-fx-background-color: #95b0e2;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="64.0" prefHeight="48.0" prefWidth="423.0" text="A free sotware to manage YOUR future" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="AR CENA" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="16.0" prefHeight="47.0" prefWidth="280.0" text="Trading Manager  " textAlignment="CENTER">
+               <font>
+                  <Font name="AR CENA" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="Close" fitHeight="35.0" fitWidth="39.0" layoutX="746.0" layoutY="5.0" onMouseClicked="#CloseProgram" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/icons8_Delete_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="470.0" layoutY="165.0" prefHeight="44.0" prefWidth="273.0" text="Detailed Statistics">
+         <font>
+            <Font name="AR CENA" size="33.0" />
+         </font>
+      </Label>
+      <PieChart layoutX="278.0" layoutY="429.0" prefHeight="263.0" prefWidth="314.0" />
+      <LineChart layoutX="254.0" layoutY="228.0" prefHeight="188.0" prefWidth="717.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <TableView fx:id="TableTrades" layoutX="277.0" layoutY="429.0" prefHeight="263.0" prefWidth="675.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
